@@ -10,6 +10,16 @@ public class WordTest {
     assertEquals(true, testWord instanceof Word);
   }
 
+  @Test
+  public void getWord_returnsWord_true() {
+    Word testWord = new Word ("mendacious");
+    assertEquals(true, testWord instanceof Word);
+  }
 
-
+  @Test
+  public void getId_returnsIdOfWord() {
+    Word testWord = new Word ("bunt");
+    assertTrue(testWord.all().size() == testWord.getId());
+  }
+  
 }

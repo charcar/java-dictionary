@@ -15,6 +15,13 @@ public class Word {
     mDefinitions = new ArrayList<Definition>();
   }
 
+  public String getWord() {
+    return mWord;
+  }
+
+  public Integer getId() {
+    return mId;
+  }
 
 
 }
