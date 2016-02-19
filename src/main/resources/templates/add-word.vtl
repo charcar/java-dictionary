@@ -1,3 +1,9 @@
 add-word.vtl
 
 <h2>add a new word to the dictionary</h2>
+
+<form action="/words" method="post">
+  <label for="word">Category name</label>
+  <input id="word" name="word" type="text">
+  <button type="submit" class="btn btn-success">Add word</button>
+</form>

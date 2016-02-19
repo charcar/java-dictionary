@@ -15,4 +15,4 @@ This is an app that will allow a user to add words to a dictionary and see the d
 
 ## Technologies Used
 
-Java, Spark, JUnit, FluentLenium, Velocity, Bootstrap
+Java, Spark, JUnit, FluentLenium, Velocity, Html

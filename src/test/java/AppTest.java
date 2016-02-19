@@ -29,4 +29,20 @@ public class AppTest extends FluentTest {
     goTo("http://localhost:4567/");
     assertThat(pageSource()).contains("Your Dictionary");
   }
+
+  @Test
+  public void navigatesToAddWord() {
+    goTo("http://localhost:4567/");
+    click("a", withText("Add a new word"));
+    assertThat(pageSource()).contains("add a new word to the dictionary");
+  }
+
+
+
+  // @Test
+  // public void wordIsCreated() {
+  //   goTo("http://localhost:4567/");
+  //   click("a", withText("Add a new word"));
+  //   fill("#word").with("remoulade");
+  //   submit(".btn");
 }
