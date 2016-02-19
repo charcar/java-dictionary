@@ -36,11 +36,18 @@ public class WordTest {
     assertTrue(testWord.getDefinitions().contains(testDefinition));
   }
 
-    @Test
-    public void all_returnsAllInstancesofWord_true() {
-      Word firstWord = new Word("Black");
-      Word secondWord = new Word("Adder");
-      assertTrue(Word.all().contains(firstWord));
-      assertTrue(Word.all().contains(secondWord));
-    }
+  @Test
+  public void all_returnsAllInstancesofWord_true() {
+    Word firstWord = new Word("Black");
+    Word secondWord = new Word("Adder");
+    assertTrue(Word.all().contains(firstWord));
+    assertTrue(Word.all().contains(secondWord));
+  }
+
+  @Test
+  public void clear_removesAllWordInstancesFromMemory() {
+    Word testWord = new Word("destruction");
+    Word.clearWords();
+    assertEquals(Word.all().size(), 0);
+  }
 }
