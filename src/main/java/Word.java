@@ -29,7 +29,18 @@ public class Word {
 
   public void addDefinition(Definition definition) {
     mDefinitions.add(definition);
-}
+  }
 
+  public static ArrayList<Word> all() {
+    return words;
+  }
+
+  public static void clearWords() {
+    words = new ArrayList<Word>();
+  }
+
+  public void clearDefinitions() {
+    mDefinitions = new ArrayList<Definition>();
+  }
 
 }

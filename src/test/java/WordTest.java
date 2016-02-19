@@ -28,5 +28,14 @@ public class WordTest {
     assertTrue(testWord.getDefinitions() instanceof ArrayList);
   }
 
-
+  @Test
+  public void addDefinition_addsADefinitionToArrayList() {
+    Word testWord = new Word("petty");
+    Definition testDefinition = new Definition("trivial, trifling");
+    testWord.addDefinition(testDefinition);
+    assertTrue(testWord.getDefinitions().contains(testDefinition));
+  }
+  
+    // @Test
+    // public void all_returnsAllInstancesofWord
 }
