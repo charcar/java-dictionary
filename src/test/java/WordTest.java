@@ -50,4 +50,10 @@ public class WordTest {
     Word.clearWords();
     assertEquals(Word.all().size(), 0);
   }
+
+  @Test
+  public void find_returnsWordWithSameId() {
+    Word testWord = new Word("poutine");
+    assertEquals(Word.find(testWord.getId())), testWord);
+  }
 }
