@@ -23,5 +23,13 @@ public class Word {
     return mId;
   }
 
+  public ArrayList<Definition> getDefinitions() {
+    return mDefinitions;
+  }
+
+  public void addDefinition(Definition definition) {
+    mDefinitions.add(definition);
+}
+
 
 }

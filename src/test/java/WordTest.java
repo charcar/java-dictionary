@@ -21,5 +21,12 @@ public class WordTest {
     Word testWord = new Word ("bunt");
     assertTrue(testWord.all().size() == testWord.getId());
   }
-  
+
+  @Test
+  public void getDefinitions_initiallyReturnsEmptyArrayList() {
+    Word testWord = new Word("laudable");
+    assertTrue(testWord.getDefinitions() instanceof ArrayList);
+  }
+
+
 }
