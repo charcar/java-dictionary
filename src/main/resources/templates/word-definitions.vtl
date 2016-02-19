@@ -1,3 +1,18 @@
 word-definitions.vtl
 
-<h2>Here are the definitions of $word</h2>
+#if ($word)
+  <h2>Here are the definitions of $word.getWord()</h2>
+  #if ($definitions)
+    <ul>
+    #foreach($definition in $word.getDefinitions)
+      <li>$word.getDefintion();
+    #end
+    </ul>
+  #else
+   <p>No definitions yet, you should add one</p>
+  #end
+#else
+  <p>We're having trouble locating that word...</p>
+#end
+
+<a href="/">return to the main dictionary page</a>

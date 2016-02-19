@@ -38,18 +38,25 @@ public class AppTest extends FluentTest {
   }
 
   @Test
-  public void wordisCreated() {
+  public void wordisCreatedandDisplayedinIndex() {
     goTo("http://localhost:4567/");
     click("a", withText("add a new word"));
-    fill(#word).with("remoulade");
+    fill("#word").with("remoulade");
     submit(".btn");
     assertThat(pageSource()).contains("remoulade");
   }
 
+  @Test
+  public void navigatesToDynamicWord() {
+    goTo("http://localhost:4567/");
+    click("a", withText("add a new word"));
+    fill("#word").with("remoulade");
+    submit(".btn");
+    click("a", withText("remoulade"));
+    assertThat(pageSource()).contains("remoulade");
+  }
+
   // @Test
-  // public void wordIsCreated() {
-  //   goTo("http://localhost:4567/");
-  //   click("a", withText("Add a new word"));
-  //   fill("#word").with("remoulade");
-  //   submit(".btn");
+  // public void
+
 }
