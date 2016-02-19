@@ -4,7 +4,7 @@ index.vtl
 
 #foreach ($word in $words)
   <ul>
-    $word.getWord()
+    <li><a href="/$word.getId()">$word.getWord()</a>
   </ul>
 #end
 
