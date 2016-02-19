@@ -14,12 +14,13 @@ public class AppTest extends FluentTest {
     return webDriver;
   }
 
-  @Rule
-  public DatabaseRule database = new DatabaseRule();
-
   @ClassRule
   public static ServerRule server = new ServerRule();
 
 
-  //Tests go here
+  // @Test
+  // public void rootTest() {
+  //   goTo("http://localhost:4567/");
+  //   assertThat(pageSource()).contains("Your Dictionary");
+  // }
 }
