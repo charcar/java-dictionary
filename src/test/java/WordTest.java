@@ -45,15 +45,24 @@ public class WordTest {
   }
 
   @Test
-  public void clear_removesAllWordInstancesFromMemory() {
+  public void clearWords_removesAllWordInstancesFromMemory() {
     Word testWord = new Word("destruction");
     Word.clearWords();
     assertEquals(Word.all().size(), 0);
   }
 
   @Test
+  public void clearDefinitions_removesAllDefinitionsfromMemory() {
+    Word testWord = new Word("petty");
+    Definition testDefinition = new Definition("trivial, trifling");
+    testWord.addDefinition(testDefinition);
+    Word.clearDefinitions();
+    assertEquals(Word.getDefinitions().size(), 0);
+  }
+
+  @Test
   public void find_returnsWordWithSameId() {
     Word testWord = new Word("poutine");
-    assertEquals(Word.find(testWord.getId())), testWord);
+    assertEquals(Word.find(testWord.getId()), testWord);
   }
 }

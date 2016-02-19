@@ -3,9 +3,9 @@ import java.util.*;
 public class Word {
   private static ArrayList<Word> words = new ArrayList<Word>();
 
+  private static ArrayList<Definition> mDefinitions;
   private String mWord;
   private int mId;
-  private ArrayList<Definition> mDefinitions;
 
 
   public Word(String word) {
@@ -23,7 +23,7 @@ public class Word {
     return mId;
   }
 
-  public ArrayList<Definition> getDefinitions() {
+  public static ArrayList<Definition> getDefinitions() {
     return mDefinitions;
   }
 
@@ -39,9 +39,9 @@ public class Word {
     words = new ArrayList<Word>();
   }
 
-  // public static void clearDefinitions() {
-  //   mDefinitions = new ArrayList<Definition>();
-  // }
+  public static void clearDefinitions() {
+    mDefinitions = new ArrayList<Definition>();
+  }
 
   public static Word find(int id) {
     try {
