@@ -35,7 +35,12 @@ public class WordTest {
     testWord.addDefinition(testDefinition);
     assertTrue(testWord.getDefinitions().contains(testDefinition));
   }
-  
-    // @Test
-    // public void all_returnsAllInstancesofWord
+
+    @Test
+    public void all_returnsAllInstancesofWord_true() {
+      Word firstWord = new Word("Black");
+      Word secondWord = new Word("Adder");
+      assertTrue(Word.all().contains(firstWord));
+      assertTrue(Word.all().contains(secondWord));
+    }
 }
