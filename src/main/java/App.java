@@ -21,6 +21,15 @@ public class App {
           return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
 
+        post("/", (request, response) -> {
+          HashMap<String, Object> model = new HashMap<String, Object>();
+          String newWordString = request.queryParams("word");
+          Word newWord = new Word(newWordString);
+          model.put("words", Word.all());
+          model.put("template", "templates/index.vtl");
+          return new ModelAndView(model, layout);
+        }, new VelocityTemplateEngine());
+
         //RESTful ARCHITECTURE
         //Use POST to create something on the server
         //Use GET to retrieve something from the server

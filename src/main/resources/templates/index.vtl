@@ -1,5 +1,11 @@
 index.vtl
 
-<h2>Your Dictionary</h2>
+<h2>your dictionary</h2>
 
-<a href="/words/new">Add a new word</a>
+#foreach ($word in $words)
+  <ul>
+    $word.getWord()
+  </ul>
+#end
+
+<a href="/words/new">add a new word</a>
