@@ -39,7 +39,7 @@ public class Word {
     words = new ArrayList<Word>();
   }
 
-  // public void clearDefinitions() {
+  // public static void clearDefinitions() {
   //   mDefinitions = new ArrayList<Definition>();
   // }
 
