@@ -12,7 +12,7 @@ public class DefinitionTest {
   @Test
   public void Definition_instantiatesWithTextOfDefinition_true() {
     Definition myDefinition = new Definition("an exhaustive list");
-    assertEquals("an exhaustive list", myDefinition.getDefintion());
+    assertEquals("an exhaustive list", myDefinition.getDefinition());
   }
 
 }
