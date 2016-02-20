@@ -46,6 +46,18 @@ public class App {
           return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
 
+        post("/:id", (request, response) -> {
+          HashMap<String, Object> model = new HashMap<String, Object>();
+          String newDefinitionString = request.queryParams("definition");
+          Definition newDef = new Definition(newDefinitionString);
+          Word word = Word.find(Integer.parseInt(request.params(":id")));
+          word.addDefinition(newDef);
+          model.put("word", word);
+          model.put("definitions", word.getDefinitions());
+          model.put("template", "templates/word-definitions.vtl");
+          return new ModelAndView(model, layout);
+        }, new VelocityTemplateEngine());
+
         //RESTful ARCHITECTURE
         //Use POST to create something on the server
         //Use GET to retrieve something from the server

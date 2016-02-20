@@ -4,8 +4,8 @@ word-definitions.vtl
   <h2>Here are the definitions of $word.getWord()</h2>
   #if ($definitions)
     <ul>
-    #foreach($definition in $word.getDefinitions)
-      <li>$word.getDefintion();
+    #foreach($definition in $definitions)
+      <li>$definition.getDefinition()
     #end
     </ul>
   #else

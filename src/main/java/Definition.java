@@ -8,7 +8,7 @@ public class Definition {
     mDefinition = definition;
   }
 
-  public String getDefintion() {
+  public String getDefinition() {
     return mDefinition;
   }
 

@@ -67,5 +67,18 @@ public class AppTest extends FluentTest {
     assertThat(pageSource()).contains("remoulade");
   }
 
+  @Test
+  public void definitionisCreatedandDisplayedinWordVTL() {
+    goTo("http://localhost:4567/");
+    click("a", withText("add a new word"));
+    fill("#word").with("remoulade");
+    submit(".btn");
+    click("a", withText("remoulade"));
+    click("a", withText("add a new definition"));
+    fill("#definition").with("aioli like sauce");
+    submit(".btn");
+    assertThat(pageSource()).contains("aioli like sauce");
+  }
+
 
 }
