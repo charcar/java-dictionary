@@ -1,17 +1,10 @@
-#if ($word)
+
   <h2>Here are the definitions of $word.getWord()</h2>
-  #if ($definitions)
     <ul>
-    #foreach($definition in $definitions)
+    #foreach($definition in $word.getDefinitions())
       <li>$definition.getDefinition()
     #end
     </ul>
-  #else
-   <p>No definitions yet, you should add one</p>
-  #end
-#else
-  <p>We're having trouble locating that word...</p>
-#end
 
 <hr>
 <a href="/$word.getId()/newDefinition">add a new definition</a>

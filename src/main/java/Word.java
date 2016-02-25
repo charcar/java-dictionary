@@ -3,7 +3,7 @@ import java.util.*;
 public class Word {
   private static ArrayList<Word> words = new ArrayList<Word>();
 
-  private static ArrayList<Definition> mDefinitions;
+  private ArrayList<Definition> mDefinitions;
   private String mWord;
   private int mId;
 
@@ -23,7 +23,7 @@ public class Word {
     return mId;
   }
 
-  public static ArrayList<Definition> getDefinitions() {
+  public ArrayList<Definition> getDefinitions() {
     return mDefinitions;
   }
 
@@ -39,7 +39,7 @@ public class Word {
     words = new ArrayList<Word>();
   }
 
-  public static void clearDefinitions() {
+  public void clearDefinitions() {
     mDefinitions = new ArrayList<Definition>();
   }
 
