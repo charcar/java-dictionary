@@ -52,15 +52,6 @@ public class WordTest {
   }
 
   @Test
-  public void clearDefinitions_removesAllDefinitionsfromMemory() {
-    Word testWord = new Word("petty");
-    Definition testDefinition = new Definition("trivial, trifling");
-    testWord.addDefinition(testDefinition);
-    Word.clearDefinitions();
-    assertEquals(Word.getDefinitions().size(), 0);
-  }
-
-  @Test
   public void find_returnsWordWithSameId() {
     Word testWord = new Word("poutine");
     assertEquals(Word.find(testWord.getId()), testWord);
